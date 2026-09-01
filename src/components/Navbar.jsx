@@ -8,8 +8,8 @@ function Navbar() {
                     className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                >
+                    data-bs-target="#navbarNav">
+
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
@@ -29,8 +29,6 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-        </nav>
-    );
+        </nav> );
 }
-
 export default Navbar;

@@ -17,13 +17,11 @@ function Products() {
             price: 50,
             image: shoes
         },
-        {
-            id: 3,
+          { id: 3,
             name: "Bag",
             price: 30,
             image: bag
-        }
-    ];
+          }];
 
     return (
         <section className="py-5">
@@ -38,13 +36,9 @@ function Products() {
                             key={product.id}
                             name={product.name}
                             price={product.price}
-                            image={product.image}
-                        />
-                    ))}
+                            image={product.image} /> ))}
                 </div>
             </div>
-        </section>
-    );
+        </section>);
 }
-
 export default Products;

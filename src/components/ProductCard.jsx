@@ -4,8 +4,7 @@ function ProductCard({ name, price, image }) {
     const [count, setCount] = useState(0);
 
     function addToCart() {
-        setCount(count + 1);
-    }
+        setCount(count + 1);}
 
     return (
         <div className="col-md-4 mb-4">
@@ -15,8 +14,7 @@ function ProductCard({ name, price, image }) {
                     src={image}
                     className="card-img-top"
                     alt={name}
-                    style={{ height: "250px", objectFit: "cover" }}
-                />
+                    style={{ height: "250px", objectFit: "cover" }} />
 
                 <div className="card-body text-center d-flex flex-column">
 
@@ -27,8 +25,7 @@ function ProductCard({ name, price, image }) {
                     <div className="d-flex justify-content-center gap-2 mt-auto">
     <button
         className="btn btn-dark"
-        onClick={addToCart}
-    >
+        onClick={addToCart} >
         Add to Cart
     </button>
 
@@ -38,8 +35,8 @@ function ProductCard({ name, price, image }) {
             if (count > 0) {
                 setCount(count - 1);
             }
-        }}
-    >
+        }} >
+
         Remove
     </button>
 </div>
@@ -50,8 +47,6 @@ function ProductCard({ name, price, image }) {
 
                 </div>
             </div>
-        </div>
-    );
+        </div> );
 }
-
 export default ProductCard;
