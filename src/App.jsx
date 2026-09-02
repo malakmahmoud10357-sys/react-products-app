@@ -1,17 +1,45 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import Products from "./components/Products";
-import Footer from "./components/Footer";
+import ProductDetails from "./pages/ProductDetails";
+import NotFound from "./pages/NotFound";
+
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <Navbar />,
+            children: [
+                {
+                    index: true,
+                    element: <Home />
+                },
+                {
+                    path: "products",
+                    element: <Products />,
+                    children: [
+                        {
+                            path: "details/:id",
+                            element: <ProductDetails />
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            path: "*",
+            element: <NotFound />
+        }
+    ],
+    {
+        basename: "/react-products-app"
+    }
+);
 
 function App() {
-    return (
-        <>
-            <Navbar/>
-            <Hero/>
-            <Products/>
-            <Footer/>
-        </>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
